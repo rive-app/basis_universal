@@ -458,8 +458,9 @@ namespace basisu
 			else if constexpr (NumBytes == 8)
 			{
 				uint32_t l = read_le_dword(m_bytes);
-				uint32_t h = read_le_dword(m_bytes + 4);
-				return static_cast<uint64_t>(l) | (static_cast<uint64_t>(h) << 32U);
+				//uint32_t h = read_le_dword(m_bytes + 4);
+				//return static_cast<uint64_t>(l) | (static_cast<uint64_t>(h) << 32U);
+				return l;
 			}
 			else
 			{
