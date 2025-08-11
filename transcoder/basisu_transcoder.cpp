@@ -4621,8 +4621,6 @@ namespace basist
 
 		const int CHROMA_THRESH = 10;
 		
-		uint32_t total_filtered_blocks = 0;
-
 		for (int by = 0; by < (int)num_blocks_y; by++)
 		{
 			for (int bx = 0; bx < (int)num_blocks_x; bx++)
@@ -4662,8 +4660,6 @@ namespace basist
 				continue;
 
 			do_filter:;
-
-				total_filtered_blocks++;
 
 				bc7_mode_5* pDst_block = (bc7_mode_5*)(static_cast<uint8_t*>(pDst_blocks) + (bx + by * output_row_pitch_in_blocks_or_pixels) * sizeof(bc7_mode_5));
 				
